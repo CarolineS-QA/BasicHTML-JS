@@ -26,3 +26,17 @@ nav li {
 nav a {
     color: orangered
 }
+
+#inspect {
+    align-content: flex-start;
+    height: 40vh;
+    width: auto;
+    border-color: black;
+    border-width: 3px;
+}
+
+#devConsole {
+    align-content: flex-start;
+    height: 40vh;
+    width: auto;
+}
