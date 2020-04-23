@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../CSS/demo.css">
+    <noscript>If you have no JS enabled you will see this!</noscript>
+    <title>JS Forms</title>
+</head>
+<body>
+    <nav class="sticky">
+        <li><a href="../index.html">HOME </a></li>
+        <li><a href="../HTML/introJS.html">JS INTRO</a></li>
+        <li><a href="../HTML/events.html">JS EVENTS</a></li>
+        <li><a href="forms.html">FORMS</a></li>
+        <li><a href="https://github.com/CarolineS-QA">CONTACT ME</a></li>
+        <li><a href="https://github.com/CarolineS-QA/BasicHTML-JS">GitHub (Repo)</a></li>
+        <li>#nav</li>
+    </nav>
+    <br><br><br><br><br>
+    <!-- use POST method so the data isn't added to url during form submit -->
+    <form id="details" method="GET" action="formsub.html">
+
+        <fieldset>
+            <legend>Title of the form</legend>
+            <ul>
+                <li>
+                    <label for="title">Title: </label>
+                    <select id="title" name="title">
+                        <option value="Miss">Miss</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Mr">Mr</option>
+                        <option value="Dr">Dr</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="username">Userame: </label>
+                    <input id="username" name="username" type ="text" />
+                </li>
+                <li>
+                    <label for="email">Email: </label>
+                    <input id="email" name="email" type ="email" />
+                </li>
+                <li>
+                    <label for="phone">Phone: </label>
+                    <input id="phone" name="phone" type ="tel" />
+                </li>
+            </ul>
+        </fieldset>
+        <br>
+        <!-- need to be grouped by name, for radio button to work --> 
+        <fieldset>  
+            <legend>Card Type</legend>
+            <ol>
+                <li>
+                    <label for="visa">Visa: </label>
+                    <input id="visa" value="visa" type="radio" name="cardType"/>
+                </li>
+                <li>
+                    <label for="mastercard">Mastercard: </label>
+                    <input id="mastercard" value="mastercard" type="radio" name="cardType"/>
+                </li>
+                <li>
+                    <label for="amex">Amex: </label>
+                    <input id="amex" value="amex" type="radio" name="cardType"/>
+                </li>
+            </ol>
+        </fieldset>
+        <br>
+        <fieldset>  
+            <legend>Like & Subscribe</legend>
+            <ol>
+                <li>
+                    <label for="news">Newletters: </label>
+                    <input id="news" value="news" type="checkbox" name="subs"/>
+                </li>
+                <li>
+                    <label for="donate">Donate your soul: </label>
+                    <input id="donate" value="donate" type="checkbox" name="subs"/>
+                </li>
+                <li>
+                    <label for="spam">Spam: </label>
+                    <input id="spam" value="spam" type="checkbox" name="subs"/>
+                </li>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <button id='bSubmit' type='submit'>Submit</button>
+            <button id='bReset' type='reset'>Reset to default</button>
+        </fieldset>
+    </form>
+<script src="../JS/forms.js"></script>
+</body>
+</html>
