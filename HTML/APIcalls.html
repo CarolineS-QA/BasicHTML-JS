@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../CSS/demo.css">
+    <noscript>If you have no JS enabled you will see this!</noscript>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="sticky">
+        <li><a href="../index.html">HOME </a></li>
+        <li><a href="../HTML/introJS.html">JS INTRO</a></li>
+        <li><a href="../HTML/events.html">JS EVENTS</a></li>
+        <li><a href="../HTML/forms.html">FORMS</a></li>
+        <li><a href="APIcalls.html">json API CALL</a></li>
+        <li><a href="https://github.com/CarolineS-QA">CONTACT ME</a></li>
+        <li><a href="https://github.com/CarolineS-QA/BasicHTML-JS">GitHub (Repo)</a></li>
+        <li>#nav</li>
+    </nav>
+    <br><br><br><br><br>
+    <h2>Click the button to...</h2>
+    <p>Get server data as a json. It will appear below.</p>
+    <p>Open the console log while making the request to see additional info about the request.</p>
+    <p>Server data is from <a href="https://jsonplaceholder.typicode.com/">jsonplaceholder</a>.</p>
+    <p>Clear does not work.</p>
+    <!--<button id="bLocalRequest">Request 'Local' Data</button>-->
+    <button id="bRequest">Request Server Data</button>
+    <button id="bPost">Post Data</button>
+    <button id="bClear">Clear</button>
+    <div id="response"></div>
+    <script src="../JS/APIcalls.js"></script>
+</body>
+</html>
