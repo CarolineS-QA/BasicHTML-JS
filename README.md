@@ -12,4 +12,4 @@ Each `.js` file will link up to the corresponding individual `.html` pages. I wi
 
 
 ## Acknowledgments
-* Savannah Vaith [[savannahvaith](https://github.com/savannahvaith)] for training me in JS.
+* Savannah Vaith [[savannahvaith](https://github.com/savannahvaith)] for training me in JS. Her repo with solutions for the exercises are [here](https://github.com/savannahvaith/JavaScript-Exercises).
