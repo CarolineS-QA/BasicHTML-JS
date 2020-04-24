@@ -2,6 +2,7 @@
     position: fixed;
     top: 0;
     width: 100%;
+    margin-left: -8;
 }
 
 .sticky + .content {
@@ -10,21 +11,26 @@
 
 nav {
     overflow: hidden;
-    background-color: rgb(188, 241, 197);
+    background-color: #000000;
     min-height: 12vh;
+    min-width: 100vw;
+    float: left;
+    margin-left: -8;
+    position: relative;
+    background-position: -8;
+    padding-left: 1vw;
 }
 
 nav li {
     float: left;
     display: block;
-    color: #000000;
     text-align: center;
     padding: 14px;
     text-decoration: none;
 }
 
 nav a {
-    color: orangered
+    color: rgb(255, 255, 255)
 }
 
 #inspect {

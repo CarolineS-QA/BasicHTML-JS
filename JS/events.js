@@ -1,9 +1,10 @@
-// Add code here for part 5-7
+const fontButton = document.querySelector("#fonts");
+const backgroundButton = document.querySelector("#bgColour");
+const textButton = document.querySelector("#textColour");
 
-
-// Do not change the code between here and the next comment
 const blueParagraph = document.querySelector("#blueText");
 
+// Edited these functions to include switching back and forth
 function blueToRed() {
     if (blueParagraph.style.color === "blue"){
     blueParagraph.style.color = "red";
@@ -17,27 +18,37 @@ function blueToRed() {
 };
 
 const greenParagraphs = document.querySelectorAll(".greenBg");
+console.log(greenParagraphs);
 
 function greenToPink() {
+  if(greenParagraphs[0].className === 'greenBg'){
     for (let greenParagraph of greenParagraphs) {
-        greenParagraph.className = 'hotpinkBg';
-        greenParagraph.textContent = greenParagraph.textContent.replace("green", "hotpink");
+         greenParagraph.className = 'hotpinkBg';
+         greenParagraph.textContent = greenParagraph.textContent.replace("green", "hotpink");
     }
+  } else {
+    for (let greenParagraph of greenParagraphs) {
+      greenParagraph.className = 'greenBg';
+      greenParagraph.textContent = greenParagraph.textContent.replace("hotpink", "green");
+  }
+  }
 }
 
 const tnrParagraph = document.querySelector("#tnrParagraph");
 
 function tnrToArial() {
+    if (tnrParagraph.style.fontFamily === "Times New Roman"){
     tnrParagraph.style.fontFamily = "arial";
     tnrParagraph.textContent = tnrParagraph.textContent.replace("Times New Roman", "Arial");
+    fontButton.textContent = "Change Arial to Times New Roman";
+    } else {
+    tnrParagraph.style.fontFamily = "Times New Roman";
+    tnrParagraph.textContent = tnrParagraph.textContent.replace("Arial", "Times New Roman");
+    fontButton.textContent = "Change Times New Roman to Arial";
+    }
 }
 
-// Add the event handlers for mouse over, mouse out and click on tnrParagraph here and register them
-
-const fontButton = document.querySelector("#fonts");
-const backgroundButton = document.querySelector("#bgColour");
-const textButton = document.querySelector("#textColour");
-
+// JS events and event listeners below
 const mouseOver = (event) => {
     event.target.style.backgroundColor = "limegreen";
     if (event.target.textContent.indexOf("background") === -1) {

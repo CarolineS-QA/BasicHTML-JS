@@ -18,11 +18,11 @@ function getJsonTodos() {
         }
     }
     REQ.open('GET', 'http://jsonplaceholder.typicode.com/todos/1'); // type of request, url = first entry
- //   REQ.open('GET', 'http://jsonplaceholder.typicode.com/todos/'); // this url is for all 200
+ //   REQ.open('GET', 'http://jsonplaceholder.typicode.com/todos/'); // this url is for all 200 entries
     REQ.setRequestHeader('Content-Type', 'Application/json');
     REQ.setRequestHeader('Access-Control-Allow-Origin', '*');
     REQ.responseType = 'json';
-    REQ.send(); //send data for post
+    REQ.send();
 }
 
 let bRequest = document.querySelector('#bRequest');
@@ -31,22 +31,15 @@ bRequest.addEventListener('click', getJsonTodos);
     function buildPString(placeholder, number){
             let newPTag = document.createElement("p");
             let newTextNode;
-            if (number === 1){
-                newTextNode = document.createTextNode(`id: ${REQ.response.id} title: ${REQ.response.title}`); // could add a for loop to cycle through properties
+            if (number === 1) {
+                newTextNode = document.createTextNode(`You have retrieved some data! Id: ${REQ.response.id} Title: ${REQ.response.title}`); // could add a for loop to cycle through properties
                 newPTag.appendChild(newTextNode);
                 placeholder.appendChild(newPTag);
             } if (number === 2) {
                 newTextNode = document.createTextNode(`Some data has been posted! Check the console log to see what.`);
                 newPTag.appendChild(newTextNode);
                 placeholder.appendChild(newPTag);
-            } if (number === 3){
-                let pTags = display.childNodes;
-                // pTags is a list? I just want to delete my created p tags!!!
-                pTags.forEach(element => {
-                   placeholder.removeChild(pTags[element]) 
-                });
-                
-            }
+            } 
     }
 
 
@@ -73,4 +66,20 @@ let butt2 = document.querySelector('#bPost');
 butt2.addEventListener('click', postTodo);
 
 let bClear = document.querySelector('#bClear');
-bClear.addEventListener('click', buildPString(display, 3));
+bClear.addEventListener('click', removeString);
+// can't pass a method into the event listener or it will just execute!!
+
+function removeString () {
+    console.log("These are the current nodes...");
+    let pTags = display.childNodes;
+    console.log(pTags);
+    pTags.forEach(element => {
+        if (element.textContent != " "){
+        element.textContent = " ";
+        console.log("The for each loop is being executed...");
+        console.log("A node has been cleared but still exist until the page is refreshed!");
+       // display.removeChild(pTags[element]);
+        }
+    });
+}
+  
